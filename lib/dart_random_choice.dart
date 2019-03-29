@@ -22,11 +22,11 @@ T randomChoice<T>(Iterable<T> options, [ Iterable<double> weights = const [] ]) 
   if (options.isEmpty) {
     throw ArgumentError.value(options.toString(), 'options', 'must be non-empty');
   }
-  if (weights.length != 0 && options.length != weights.length) {
+  if (weights.isNotEmpty && options.length != weights.length) {
     throw ArgumentError.value(weights.toString(), 'weights', 'must be empty or match length of options');
   }
 
-  if (weights.length == 0) {
+  if (weights.isEmpty) {
     return options.elementAt(Random().nextInt(options.length));
   }
 
