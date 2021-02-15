@@ -1,6 +1,6 @@
 name: dart_random_choice
 description: A library for generating a random choice from an iterable.
-version: 0.0.3-nullsafety.0
+version: 0.1.0-nullsafety.0
 author: Kirollos Morkos <kman2121@gmail.com>
 homepage: https://github.com/kmorkos/dart_random_choice
 repository: https://github.com/kmorkos/dart_random_choice
@@ -12,4 +12,3 @@ environment:
 
 dev_dependencies:
   test: ^1.16.0-nullsafety.16
-
