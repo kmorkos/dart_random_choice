@@ -1,3 +1,8 @@
+## [0.2.0] - 12/23/2022
+
+* Migrate to null safe dart
+* Chore: formatting
+
 ## [0.1.0-nullsafety.0] - 02/15/2021
 
 * Migrate to null safe dart
