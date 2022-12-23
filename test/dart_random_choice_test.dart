@@ -24,7 +24,8 @@ void main() {
     }
 
     // Hard to test this deterministically. Allow 5% room for error.
-    expect(results, everyElement(closeTo(numTries / options.length, 0.05 * numTries)));
+    expect(results,
+        everyElement(closeTo(numTries / options.length, 0.05 * numTries)));
   });
 
   test('Including weights generates according to weighted distribution.', () {
@@ -39,18 +40,14 @@ void main() {
     }
 
     var totalWeight = weights.reduce((val, curr) => val + curr);
-    var expected = List.generate(numOptions, (i) => ((weights[i] / totalWeight) * numTries).floor());
+    var expected = List.generate(
+        numOptions, (i) => ((weights[i] / totalWeight) * numTries).floor());
 
     // Hard to test this deterministically. Allow 5% room for error.
     var delta = 0.05 * numTries;
     expect(
-      results,
-      pairwiseCompare<num, num>(
-        expected,
-        (num e, num a) => (e - a).abs() <= delta,
-        'within 5% error.'
-      )
-    );
+        results,
+        pairwiseCompare<num, num>(expected,
+            (num e, num a) => (e - a).abs() <= delta, 'within 5% error.'));
   });
 }
-

@@ -8,15 +8,15 @@ void main() {
   // I probably won't be eating a salad...
   print('You should eat a $whatToEat.');
 
-
   Set<Point> cardinalDirections = {
-    Point(0, 1), Point(0, -1),
-    Point(1, 0), Point(-1, 0),
+    Point(0, 1),
+    Point(0, -1),
+    Point(1, 0),
+    Point(-1, 0),
   };
   Point direction = randomChoice<Point>(cardinalDirections);
   // Each direction is equally likely.
   print('Move to $direction.');
-
 
   Runes alphabet = Runes('abcdefghijklmnopqrstuvwxyz');
   int charCode = randomChoice<int>(alphabet);
@@ -24,4 +24,3 @@ void main() {
   // Any iterable works!
   print('$char is my favorite letter.');
 }
-
